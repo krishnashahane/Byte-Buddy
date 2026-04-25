@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#E85D2C" />
+    <meta name="description" content="Byte Buddy - Food ordering & micro-credit platform for India" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Byte Buddy</title>
+    <!-- Tailwind CSS via CDN - no build step needed -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#E85D2C',
+              'primary-dark': '#C74A1E',
+              'primary-light': '#FF7A4D',
+              secondary: '#1B4332',
+              'secondary-light': '#2D6A4F',
+              accent: '#F4A261',
+              'accent-light': '#F7BC8A',
+              cream: '#FDF6EC',
+              'cream-dark': '#F5E6D0',
+              dark: '#0F0F1A',
+              'dark-card': '#1A1A2E',
+              'dark-surface': '#252540',
+              'dark-elevated': '#2F2F50'
+            },
+            fontFamily: {
+              heading: ['Outfit', 'sans-serif'],
+              body: ['DM Sans', 'sans-serif']
+            },
+            borderRadius: {
+              card: '20px',
+              btn: '14px',
+              modal: '28px',
+              pill: '9999px'
+            },
+            boxShadow: {
+              soft: '0 4px 24px rgba(0,0,0,0.06)',
+              lift: '0 8px 40px rgba(0,0,0,0.10)',
+              glow: '0 0 30px rgba(232,93,44,0.25)',
+              'glass': '0 8px 32px rgba(0,0,0,0.08)',
+              'glass-lg': '0 12px 48px rgba(0,0,0,0.12)',
+              'inner-glow': 'inset 0 1px 1px rgba(255,255,255,0.4)',
+              'dark-glass': '0 8px 32px rgba(0,0,0,0.3)'
+            },
+            backdropBlur: {
+              xs: '2px',
+              glass: '16px',
+              'glass-lg': '24px',
+              'glass-xl': '40px'
+            },
+            screens: {
+              'xs': '375px',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+              'shimmer': 'shimmer 1.5s infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate'
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' }
+              },
+              'pulse-soft': {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0.7' }
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' }
+              },
+              glow: {
+                '0%': { boxShadow: '0 0 20px rgba(232,93,44,0.2)' },
+                '100%': { boxShadow: '0 0 40px rgba(232,93,44,0.4)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background: #FDF6EC;
+        min-height: 100vh;
+      }
+      .dark body, body.dark-body {
+        background: #0F0F1A;
+      }
+    </style>
+  </head>
+  <body class="font-body text-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
